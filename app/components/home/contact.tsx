@@ -47,7 +47,7 @@ export function Contact() {
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div className="bg-white border-2 border-[#0B2B5D] rounded-sm p-8">
+            <div className="bg-white border-2 border-gray-200 rounded-sm p-8">
               <h3 className="text-2xl font-bold text-[#0B2B5D] mb-6">
                 Teknohub Limited
               </h3>
@@ -146,7 +146,7 @@ export function Contact() {
               </div>
 
               {/* Phone */}
-              <div className="flex items-center gap-3 mb-8 p-4 bg-[#0B2B5D] text-white rounded-sm">
+              <div className="flex items-center gap-3 mb-8 ">
                 <svg
                   className="w-6 h-6"
                   fill="none"
