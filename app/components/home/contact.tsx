@@ -195,7 +195,7 @@ export function Contact() {
             </div>
 
             {/* Contact Form / Newsletter - Animated Container */}
-            <div className="relative min-h-[600px] overflow-hidden">
+            <div className="relative min-h-150 overflow-hidden">
               {/* Newsletter Card */}
               <div
                 className={`absolute inset-0 transition-all duration-500 ease-in-out ${
