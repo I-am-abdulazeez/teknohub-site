@@ -29,24 +29,27 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img
-                src="/logo-only.png"
-                alt="Teknohub Logo"
-                className="h-12 w-12"
-              />
+              {/* Logo with white background for better visibility */}
+              <div className="bg-white p-2 rounded-sm">
+                <img
+                  src="/logo-only.png"
+                  alt="Teknohub Logo"
+                  className="h-8 w-8"
+                />
+              </div>
               <span className="text-2xl font-bold">Teknohub</span>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
               Your trusted Microsoft solutions partner delivering modern,
               scalable business applications across Africa and beyond.
             </p>
-            {/* Social Links */}
+            {/* Social Links - Borderless with hover effects */}
             <div className="flex gap-4">
               <a
                 href="https://facebook.com/teknohub"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 border-2 border-[#EC820C] rounded-sm flex items-center justify-center hover:bg-[#EC820C] transition-colors"
+                className="w-10 h-10 bg-white/10 rounded-sm flex items-center justify-center hover:bg-[#EC820C] transition-all duration-300 hover:scale-110"
                 aria-label="Facebook"
               >
                 <svg
@@ -61,7 +64,7 @@ export function Footer() {
                 href="https://linkedin.com/company/teknohub"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 border-2 border-[#EC820C] rounded-sm flex items-center justify-center hover:bg-[#EC820C] transition-colors"
+                className="w-10 h-10 bg-white/10 rounded-sm flex items-center justify-center hover:bg-[#EC820C] transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -73,8 +76,23 @@ export function Footer() {
                 </svg>
               </a>
               <a
+                href="https://twitter.com/teknohub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-sm flex items-center justify-center hover:bg-[#EC820C] transition-all duration-300 hover:scale-110"
+                aria-label="Twitter"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a
                 href="mailto:info@teknohub.com"
-                className="w-10 h-10 border-2 border-[#EC820C] rounded-sm flex items-center justify-center hover:bg-[#EC820C] transition-colors"
+                className="w-10 h-10 bg-white/10 rounded-sm flex items-center justify-center hover:bg-[#EC820C] transition-all duration-300 hover:scale-110"
                 aria-label="Email"
               >
                 <svg
