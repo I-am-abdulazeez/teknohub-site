@@ -3,15 +3,30 @@ import { Link } from "react-router";
 
 export function Hero() {
   return (
-    <section className="relative bg-[#0B2B5D] text-white overflow-hidden">
+    <section className="relative bg-[#0B2B5D] text-white overflow-hidden min-h-150 flex items-center">
+      {/* Background Image Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop"
+          alt="Modern office workspace"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-linear-to-br from-[#0B2B5D]/95 via-[#0B2B5D]/90 to-[#0a1f42]/95" />
+      </div>
+
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#EC820C] opacity-10 rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#EC820C] opacity-10 rounded-full translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#EC820C] opacity-10 rounded-full -translate-y-1/2 translate-x-1/2 z-0" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#EC820C] opacity-10 rounded-full translate-y-1/2 -translate-x-1/2 z-0" />
+
+      {/* Animated grid pattern */}
+      <div className="absolute inset-0 opacity-10 z-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
+      </div>
 
       <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#EC820C] text-white px-4 py-2 rounded-sm mb-8">
+          <div className="inline-flex items-center gap-2 bg-[#EC820C] text-white px-4 py-2 rounded-sm mb-8 shadow-lg hover:shadow-xl transition-shadow">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
@@ -23,12 +38,12 @@ export function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
             Microsoft Dynamics 365 Business Central ERP and Power Platform
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-3xl mx-auto drop-shadow-md">
             Let us build the infrastructure for your success using Microsoft
             Dynamics 365 Business Central, AI, and the Power Platform
           </p>
@@ -38,7 +53,7 @@ export function Hero() {
             <Button
               as={Link}
               to="/contact"
-              className="bg-[#EC820C] text-white font-semibold text-lg hover:bg-[#d67509] transition-colors"
+              className="bg-[#EC820C] text-white font-semibold text-lg hover:bg-[#d67509] transition-colors shadow-lg hover:shadow-xl"
               radius="sm"
               size="lg"
             >
@@ -47,7 +62,7 @@ export function Hero() {
 
             <a
               href="tel:+254207903355"
-              className="flex items-center gap-2 text-white hover:text-[#EC820C] transition-colors font-semibold"
+              className="flex items-center gap-2 text-white hover:text-[#EC820C] transition-colors font-semibold px-4 py-2 rounded-sm hover:bg-white/10"
             >
               <svg
                 className="w-5 h-5"
@@ -68,7 +83,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="h-2 bg-[#EC820C]" />
+      <div className="h-2 bg-[#EC820C] relative z-10" />
     </section>
   );
 }
