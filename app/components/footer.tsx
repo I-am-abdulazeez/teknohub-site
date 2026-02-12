@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import Logo from "./logo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -31,13 +32,8 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-6">
               {/* Logo with white background for better visibility */}
               <div className="bg-white p-2 rounded-sm">
-                <img
-                  src="/logo-only.png"
-                  alt="Teknohub Logo"
-                  className="h-8 w-8"
-                />
+                <Logo />
               </div>
-              <span className="text-2xl font-bold">Teknohub</span>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
               Your trusted Microsoft solutions partner delivering modern,
