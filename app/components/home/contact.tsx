@@ -8,6 +8,7 @@ export function Contact() {
     name: "",
     email: "",
     message: "",
+    company: "",
   });
   const [subscribeEmail, setSubscribeEmail] = useState("");
 
@@ -16,7 +17,7 @@ export function Contact() {
     // Handle form submission
     console.log("Form submitted:", formData);
     alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", company: "", message: "" });
     setShowForm(false);
   };
 
@@ -257,8 +258,8 @@ export function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <Input
                       type="text"
-                      label="Name"
-                      placeholder="Your name"
+                      label="Full Name"
+                      placeholder="John Doe"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -271,12 +272,24 @@ export function Contact() {
                     <Input
                       type="email"
                       label="Email"
-                      placeholder="your@email.com"
+                      placeholder="johdoe@ecompany.com"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
                       required
+                      classNames={{
+                        input: "text-gray-900",
+                      }}
+                    />
+                    <Input
+                      type="text"
+                      label="Company Name"
+                      placeholder="Your Company"
+                      value={formData.company}
+                      onChange={(e) =>
+                        setFormData({ ...formData, company: e.target.value })
+                      }
                       classNames={{
                         input: "text-gray-900",
                       }}
