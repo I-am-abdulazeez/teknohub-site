@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+
 import { Hero } from "~/components/home/hero";
 import { About } from "~/components/home/about";
 import { Brands } from "~/components/home/brands";
