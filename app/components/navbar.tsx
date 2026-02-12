@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { Button } from "@heroui/button";
 import { useState } from "react";
+import Logo from "./logo";
 
 export function Navbar() {
   const location = useLocation();
@@ -24,11 +25,7 @@ export function Navbar() {
             to="/"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <img
-              src="/teknohub_logo.png"
-              alt="Teknohub Logo"
-              className="h-10 w-auto"
-            />
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
